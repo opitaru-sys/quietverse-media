@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Quiet Verse</title>
+<meta name="description" content="A daily devotional for people carrying something heavy. One verse, one honest struggle.">
+<meta property="og:title" content="The Quiet Verse">
+<meta property="og:description" content="One verse, one honest struggle. A quiet daily devotional, plus a free 4-day guide.">
+<meta property="og:image" content="https://opitaru-sys.github.io/quietverse-media/assets/avatar.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/avatar.png">
+<style>
+  @font-face {
+    font-family: "Cormorant Garamond";
+    src: url("assets/fonts/CormorantGaramond-Medium.ttf") format("truetype");
+    font-weight: 500; font-display: swap;
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("assets/fonts/Lato-Regular.ttf") format("truetype");
+    font-weight: 400; font-display: swap;
+  }
+
+  :root {
+    --cream: #faf6f0;
+    --cream-2: #f4ece0;
+    --ink: #291f14;
+    --soft: #6b5c47;
+    --gold: #9e7d42;
+    --gold-lite: #d8b86c;
+    --line: #e5dccc;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Lato", -apple-system, system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: 40px 20px 56px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrap { width: 100%; max-width: 520px; }
+
+  header { text-align: center; }
+  .avatar {
+    width: 116px; height: 116px; border-radius: 50%;
+    object-fit: cover; margin: 0 auto 22px;
+    display: block; border: 1px solid var(--line);
+    box-shadow: 0 6px 28px rgba(41, 31, 20, 0.10);
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500; font-size: 46px; line-height: 1.05;
+    margin: 0 0 10px; letter-spacing: 0.3px;
+  }
+  .tagline {
+    color: var(--soft); font-size: 15px; margin: 0 0 6px;
+    letter-spacing: 0.2px;
+  }
+
+  .btn {
+    display: block; width: 100%; text-align: center;
+    text-decoration: none; cursor: pointer;
+    font-family: "Lato", sans-serif; font-size: 16px; font-weight: 700;
+    letter-spacing: 0.3px; padding: 16px 20px; border-radius: 12px;
+    border: 1px solid transparent; transition: transform .08s ease, box-shadow .2s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary {
+    background: var(--gold); color: #fff;
+    box-shadow: 0 6px 20px rgba(158, 125, 66, 0.28);
+  }
+  .btn-primary:hover { box-shadow: 0 8px 26px rgba(158, 125, 66, 0.38); }
+  .btn-ghost {
+    background: transparent; color: var(--ink); border-color: var(--line);
+  }
+  .btn-ghost:hover { border-color: var(--gold); }
+
+  section { margin-top: 30px; }
+
+  .card {
+    background: var(--cream-2);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 2.2px;
+    text-transform: uppercase; color: var(--gold); margin: 0 0 10px;
+  }
+  .card h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500; font-size: 32px; line-height: 1.1; margin: 0 0 8px;
+  }
+  .card p.lead { color: var(--soft); font-size: 15px; margin: 0 0 20px; }
+
+  /* --- email capture --- */
+  /* MAILERLITE EMBED SWAPS IN HERE. The block below is a styled preview so the
+     design is reviewable before the form is wired. Replace #ql-form-preview
+     with the MailerLite embed snippet; the CSS under "MailerLite overrides"
+     restyles their markup to match this brand. */
+  #ql-form-preview { display: grid; gap: 10px; }
+  .field {
+    width: 100%; padding: 14px 16px; font-size: 16px;
+    font-family: "Lato", sans-serif; color: var(--ink);
+    background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  }
+  .field:focus { outline: none; border-color: var(--gold); }
+  .fineprint { color: var(--soft); font-size: 12.5px; margin: 12px 0 0; }
+
+  /* MailerLite overrides (apply once the embed is in) */
+  .ml-form-embedContainer { background: transparent !important; }
+  .ml-form-embedContainer .ml-form-embedWrapper { background: transparent !important; border: 0 !important; }
+  .ml-form-embedContainer input[type="email"] {
+    border-radius: 10px !important; border: 1px solid var(--line) !important;
+    padding: 14px 16px !important; font-family: "Lato", sans-serif !important;
+  }
+  .ml-form-embedContainer button {
+    background: var(--gold) !important; border-radius: 12px !important;
+    font-family: "Lato", sans-serif !important; font-weight: 700 !important;
+  }
+
+  .links { margin-top: 30px; display: grid; gap: 12px; }
+
+  footer {
+    margin-top: 36px; text-align: center;
+    color: var(--soft); font-size: 12.5px; line-height: 1.55;
+  }
+  footer p { margin: 0 0 8px; }
+  footer a { color: var(--soft); }
+
+  @media (max-width: 380px) {
+    h1 { font-size: 40px; }
+    .card h2 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="avatar" src="assets/avatar.png" alt="The Quiet Verse">
+      <h1>The Quiet Verse</h1>
+      <p class="tagline">One verse, one honest struggle.</p>
+    </header>
+
+    <section>
+      <a class="btn btn-primary"
+         href="https://www.youtube.com/@thequietverseo?sub_confirmation=1">
+        Subscribe on YouTube
+      </a>
+    </section>
+
+    <section class="card" aria-label="Free devotional guide">
+      <p class="eyebrow">Free 4-Day Devotional</p>
+      <h2>When Everything Feels Heavy</h2>
+      <p class="lead">One verse, one honest struggle, and a short prayer for each
+        of four days. Enter your email and it lands in your inbox.</p>
+
+      <!-- MailerLite embedded form (form id Tf4SIC). Renders via universal.js
+           loaded at the bottom of the page; needs the account id there too. -->
+      <div class="ml-embedded" data-form="Tf4SIC"></div>
+
+      <p class="fineprint">No spam. One quiet email with the guide, then a new
+        devotional when it goes out. Unsubscribe any time.</p>
+    </section>
+
+    <section class="links">
+      <a class="btn btn-ghost" href="https://www.youtube.com/@thequietverseo">
+        Watch the latest devotional
+      </a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/thequietverseo/">
+        Follow on Instagram
+      </a>
+    </section>
+
+    <footer>
+      <p>Scripture quotations are from the World English Bible (public domain).</p>
+      <p>Produced with AI tools under human editorial direction, and every script
+        is reviewed by a person before it is published.</p>
+    </footer>
+  </div>
+
+  <!-- MailerLite Universal (account 2524041) -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2524041');
+  </script>
+</body>
+</html>
